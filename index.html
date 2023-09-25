@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Website in HTML CSS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="contnaier">
+      <!-- Header start -->
+      <header>
+        <nav class="nav contnaier">
+          <h2 class="nav_logo"><a href="#">Anurag</a></h2>
+          <ul class="menu_items">
+            <img src="images/times.svg" alt="timesicon" id="menu_toggol">
+            <li><a href="" class="nav_link">Home</a></li>
+            <li><a href="" class="nav_link">About</a></li>
+            <li><a href="" class="nav_link">Service</a></li>
+            <li><a href="" class="nav_link">Project</a></li>
+            <li><a href="" class="nav_link">Contect</a></li>
+          </ul>
+          <img src="images/bars.svg" alt="timesicon" id="menu_toggol">
+        </nav>
+      </header>
+      <!-- Header end -->
+
+      <!-- Hero Start -->
+      <section class="hero">
+        <div class="row">
+          <div class="column">
+            <h2>Frontend Developer</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam odit nesciunt maiores unde excepturi ex! Ipsam laudantium minima, ipsum laboriosam, porro perspiciatis non quod neque in pariatur aspernatur maiores inventore.</p>
+            <div class="button">
+              <button class="btn">Read More</button>
+              <button class="btn">Contact us</button>
+            </div>
+          </div>
+          <div class="column">
+            <img src="images/hero.png" alt="heroimg" class="hero_img">
+          </div>
+        </div>
+      </section>
+      <!-- Hero end -->
+    </main>
+    <script>
+
+      const header = document.querySelector("header");
+      const menuToggoler = document.querySelectorAll("#menu_toggol");
+
+      menuToggoler.forEach(toggler => {
+        toggler.addEventListener("click", () => header.classList.toggle("showMenu"))
+      })
+    </script>
+  </body>
+</html>
